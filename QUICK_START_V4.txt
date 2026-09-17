@@ -1,0 +1,24 @@
+V4 STABIL - QUICK START
+
+1. Upload seluruh isi project ke GitHub.
+2. Actions > Build APK V4 Stabil > Run workflow.
+3. Tunggu sampai Upload APK centang.
+4. Kembali ke Summary run.
+5. Artifacts > PLN-Kepuasan-Pelanggan-V4-STABIL.
+6. Download dan extract.
+7. Install PLN-Kepuasan-Pelanggan-V4-STABIL.apk.
+8. Buka APK.
+9. Masukkan URL Apps Script /exec.
+10. SIMPAN & MULAI.
+
+ADMIN:
+Tahan pojok kiri atas 4 detik.
+PIN default: 1234.
+
+Jika APK tidak terbuka:
+- update Google Chrome
+- update Android System WebView
+- restart tablet
+- uninstall versi lama
+- install V4
+- tes Demo Lokal

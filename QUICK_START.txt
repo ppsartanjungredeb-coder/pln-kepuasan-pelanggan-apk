@@ -1,0 +1,30 @@
+PLN KEPUASAN PELANGGAN - QUICK START
+
+1. Siapkan Google Spreadsheet.
+2. Extensions > Apps Script.
+3. Copy backend-google-apps-script/Code.gs ke Code.gs.
+4. Tambah file HTML bernama Index.
+5. Copy backend-google-apps-script/Index.html ke Index.
+6. Jalankan setupSpreadsheet satu kali.
+7. Deploy > New deployment > Web app.
+8. Copy URL yang berakhir /exec.
+
+BUILD APK:
+A. Android Studio:
+   Open project > tunggu Sync > Build > Build APKs.
+
+B. GitHub:
+   Upload semua isi folder ini ke repository.
+   Actions > Build APK > Run workflow.
+   Download artifact PLN-Kepuasan-Pelanggan-APK.
+
+SETELAH INSTALL APK:
+1. Buka APK.
+2. Masukkan URL Web App /exec.
+3. Tekan SIMPAN & MULAI.
+4. Selesai. APK berikutnya langsung membuka survei fullscreen.
+
+ADMIN:
+- Tekan dan tahan layar 4 detik.
+- PIN default: 1234
+- Segera ganti PIN jika sudah produksi.
