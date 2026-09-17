@@ -1,0 +1,45 @@
+name: Build APK V4 Stabil
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.9'
+
+      - name: Build APK
+        run: gradle assembleDebug --stacktrace
+
+      - name: Copy APK
+        run: cp app/build/outputs/apk/debug/app-debug.apk PLN-Kepuasan-Pelanggan-V4-STABIL.apk
+
+      - name: Verify APK
+        run: |
+          test -f PLN-Kepuasan-Pelanggan-V4-STABIL.apk
+          ls -lh PLN-Kepuasan-Pelanggan-V4-STABIL.apk
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: PLN-Kepuasan-Pelanggan-V4-STABIL
+          path: PLN-Kepuasan-Pelanggan-V4-STABIL.apk
+          if-no-files-found: error
+          retention-days: 30
